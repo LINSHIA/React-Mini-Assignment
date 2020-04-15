@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Button } from "semantic-ui-react";
 
 export interface IAppProps {}
 
@@ -17,7 +16,7 @@ export default class App extends React.Component<IAppProps, IState> {
     this.setState({ changeColor: "Blue" });
   }
 
-  public changColor = () => {
+  public changeColor = () => {
     this.setState({ changeColor: "Green" });
   };
 
@@ -25,7 +24,7 @@ export default class App extends React.Component<IAppProps, IState> {
     return (
       <div style={{ backgroundColor: this.state.changeColor }}>
         <h1>{this.state.changeColor}</h1>
-        <button onClick={this.changColor}> Click me </button>
+        <button onClick={this.changeColor}> Click me </button>
       </div>
     );
   }
